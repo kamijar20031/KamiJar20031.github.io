@@ -12,12 +12,8 @@ const images = [{srcs:['imgs/img-0.png', 'imgs/img-1.png'], idx:0},
 ];
 const pages = [document.getElementById("page1"),document.getElementById("page2"), document.getElementById("page3")];
 const numPages = pages.length;
-const cards = document.getElementsByClassName("mainBoxes");
-const cardPlaceholder = document.getElementById("placeholder");
 
 var currentPage = 1;
-var shuffled = false;
-var waitingCard = false;
 var waitingPage = false;
 var changeThemeFlag = false;
 
@@ -106,19 +102,3 @@ function prevPage()
         
     }
 }
-
-function changeIntroCard()
-{
-    if (!waitingCard)
-    {
-        waitingCard = true;
-        shuffled = !shuffled;
-        cards[+shuffled].childNodes[1].style.animationName = "cardToBack";
-        cards[+(!shuffled)].childNodes[1].style.animationName = "cardToFront";
-        cards[+shuffled].childNodes[1].addEventListener('animationend', () => {
-            waitingCard=false;
-        });
-    }
-}
-
-cardPlaceholder.addEventListener("mouseenter", changeIntroCard);
