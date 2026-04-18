@@ -1,0 +1,586 @@
+:root
+{
+
+    color-scheme: light dark;
+
+    user-select: none;
+
+    --mainOrng: rgba(252, 176, 69, 1);
+    --mainPrpl: rgba(154, 31, 181, 1);
+    --mainGreen: rgb(48, 181, 31);
+    --auxGreen: rgba(66, 141, 111, 0.379);
+
+    --gradientBG: light-dark(#aabd9e, #181b17);
+    --modalBG:  light-dark( rgba(255,255,255,0.4), rgba(40,40,40,0.6));
+
+    --fontColor: light-dark(#161616, #bbbbbb);
+
+    --patternScale: 200px;
+    --patternDark1: light-dark(#bb9983, #151515);
+    --patternDark2: light-dark( #bd9b85, #181818);
+    --patternDark3:  light-dark(#bd9d87, #151515);
+    --patternDark: repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--patternDark3) 0 50%) 
+        calc(var(--patternScale)/2) calc(var(--patternScale)*tan(30deg)/2),
+        repeating-conic-gradient(from 30deg,var(--patternDark1) 0 60deg,var(--patternDark2) 0 120deg,var(--patternDark3) 0 50%);
+
+    --patternLight1: light-dark(#ddc2b0, #181818);
+    --patternLight2:light-dark( #dfc4b2,#1a1a1a);
+    --patternLight3:light-dark( #e2c6b4, #181818);
+    --patternLight:
+        repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--patternLight3) 0 50%) 
+        calc(var(--patternScale)/2) calc(var(--patternScale)*tan(30deg)/2),
+        repeating-conic-gradient(from 30deg,var(--patternLight1) 0 60deg,var(--patternLight2) 0 120deg,var(--patternLight3) 0 50%);
+
+    --rootWidth: 1vw;
+
+    --projectWidth: calc(12rem + 8vw );
+    --projectHeight: calc(9rem + 6vw );
+    --projectGap: 2vw;
+    --mask: linear-gradient(0deg, transparent, black 20%, black 80%, transparent);
+    --gradient: linear-gradient(90deg, var(--mainPrpl) 0%, var(--mainOrng) 20%, var(--mainPrpl) 40%,var(--mainOrng) 60%,  var(--mainPrpl) 80%,var(--mainOrng) 100%);
+
+    color: var(--fontColor);
+}
+
+body
+{
+    margin:0;
+    width:100vw;
+    height:100vw;
+    overflow:hidden;
+    background-color: rgb(56, 56, 30);
+    font-family: 'Smooch Sans';
+}
+
+#bg1
+{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    animation: animateBG1;
+    background: var(--gradient);
+    animation-duration: 50.0s;
+    background-size:500%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+#sidePage
+{
+    position:absolute;
+    top:5vh;
+    left: 100vw;
+    width:95vw;
+    background-color: #303030c9;
+    transition: all 1s ease-in-out;
+    border-radius: 2rem;
+    backdrop-filter: blur(1rem);
+    padding:2rem;
+    box-sizing: border-box;
+    
+}
+
+#welcome 
+{
+    padding: 4rem 0;
+    margin-inline: auto;
+    margin-top:25vh;
+    width:100%;
+    background-color: var(--modalBG);
+    box-shadow: 0px 10px 16px 10px rgba(40, 40, 40, 0.279);
+    overflow: hidden;
+}
+
+#welcome > img
+{
+    border-radius: 1vw;
+    margin:auto;
+    display:block;
+}
+
+.welcomeHead
+{
+    filter: brightness(0.9);
+    text-align: center;
+    animation: animateBG1;
+    background: var(--gradient);
+    animation-duration: 50.0s;
+    background-size:500%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color:transparent;
+    background-clip:text;
+    font-size: 3.3rem;
+    font-family: 'Climate Crisis';
+    transition: height 0.6s ease-in-out;
+    
+}
+
+#textWrapper
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    box-sizing: border-box;
+    width:70%;
+    margin:auto;
+}
+.columnText
+{
+    text-align: justify;
+    font-size: 1.6rem;
+}
+#zdjecie
+{
+    border-left: 1px solid white;
+    box-sizing: border-box;
+    margin:auto;
+}
+#zdjecie img
+{
+    margin:1rem;
+    margin-left: 2rem;
+    width:80%;
+    border-radius: 1rem;
+}
+#welcomeText
+{
+    color: var(--fontColor);
+    text-align: center;
+    font-size: 1.8rem;
+    width: 40vw;
+    margin:auto;
+}
+#arrow
+{
+    text-align: center;
+    font-size: 2rem;
+    filter: brightness(0.9);
+    animation: animateBG1;
+    background: var(--gradient);
+    animation-duration: 50.0s;
+    background-size:500%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color:transparent;
+    background-clip:text;
+    font-weight:800;
+}
+
+#arrowBG
+{
+    margin-inline:auto;
+    margin-top:3vh;
+    width: fit-content;
+    padding: 0.4rem 2.5rem;
+    background-color: var(--modalBG);
+    border-radius: 1rem;
+    box-shadow: 1px 3px 10px 1px rgba(40, 40, 40, 0.279);
+    transition: all 0.15s ease-in-out;
+}
+#arrowBG:hover
+{
+    cursor:pointer;
+    box-shadow: 0px 2px 10px 1px var(--auxGreen);
+    transform: scale(1.02);
+}
+#arrowBG:active
+{
+    cursor:pointer;
+    box-shadow: 0px 2px 7px 3px var(--auxGreen);
+    transform: scale(1);
+}
+#page2
+{
+    position:fixed;
+    top:99vh;
+    left:-2.5vw;
+    background-color: #161616;
+    width:105vw;
+    height:100vh;
+    padding: 5vh 0;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    transform: rotate(0.3deg);
+    /* specjalne tlo */
+    --s: 108px;
+    --_g: 
+        var(--patternDark2) 6%  14%,var(--patternDark1) 16% 24%,var(--patternDark2) 26% 34%,var(--patternDark1) 36% 44%,
+        var(--patternDark2) 46% 54%,var(--patternDark1) 56% 64%,var(--patternDark2) 66% 74%,var(--patternDark1) 76% 84%,var(--patternDark2) 86% 94%;
+    background:
+        radial-gradient(100% 100% at 100% 0,var(--patternDark1) 4%,var(--_g), var(--patternDark3) 96%,#0000),
+        radial-gradient(100% 100% at 0 100%,#0000, var(--patternDark3) 4%,var(--_g),var(--patternDark1) 96%)
+        var(--patternDark1);
+    background-size: var(--s) var(--s);
+
+}
+#projectContainer
+{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    margin:3vh auto;
+    width:50vw;
+    height:70vh;
+    mask-image: var(--mask);
+    overflow:scroll;
+    background-color: #202020;
+    border-inline: 1px dashed var(--mainGreen);
+        /* specjalne tlo */
+    --s: 108px;
+    /* --c1: #151515;
+    --c2: #1a1a1a;
+    --c3: #151515; */
+    --_g: 
+        var(--patternLight2) 6%  14%,var(--patternLight1) 16% 24%,var(--patternLight2) 26% 34%,var(--patternLight1) 36% 44%,
+        var(--patternLight2) 46% 54%,var(--patternLight1) 56% 64%,var(--patternLight2) 66% 74%,var(--patternLight1) 76% 84%,var(--patternLight2) 86% 94%;
+    background:
+        radial-gradient(100% 100% at 100% 0,var(--patternLight1) 4%,var(--_g), var(--patternLight3) 96%,#0000),
+        radial-gradient(100% 100% at 0 100%,#0000, var(--patternLight3) 4%,var(--_g),var(--patternLight1) 96%)
+        var(--patternLight1);
+    background-size: var(--s) var(--s);
+}
+#projectRoot
+{
+    margin: 5% auto;
+    background-color: var(--auxGreen);
+    width: var(--rootWidth);
+    height:fit-content;
+    border-radius: 10vw;
+    padding: 1px 0;
+    z-index: 50;
+}
+.project
+{
+    overflow: hidden;
+    border: dashed 1px var(--mainGreen);
+    margin: 20vh 0;
+    position:relative;
+    width: var(--projectWidth);
+    height: var(--projectHeight);
+    border-radius: 2rem;
+    animation: projectIn;
+    animation-timeline: view();
+    
+}
+
+.projectTitle
+{
+    padding-top:0.5vw;
+    position:relative;
+    bottom:calc(var(--projectHeight)/4.0);
+    left:0;
+    margin:auto;
+    color:white;
+    font-size: 2rem;
+    text-align: center;
+    height:calc(var(--projectHeight)/4.0);
+    background-color: #30303062;
+    transition: ease-in-out all 0.3s;
+}
+.projectTitle > p
+{
+    display:block;
+    margin:auto;
+    margin-top: 0.5rem;
+    padding:0;
+}
+
+.projectTitle:hover
+{
+    cursor: pointer;
+    background-color: #303030d8;
+    height:var(--projectHeight);
+    bottom:var(--projectHeight);
+}
+.images > img
+{
+    position:relative;
+    margin:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    transition: linear all 0.3s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    
+}
+.images
+{
+    transition: ease-in-out all 0.3s;
+    height:100%;
+    width:100%
+}
+.bottom
+{
+    top:-102%;
+}
+.images:hover
+{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+#projectContainer::-webkit-scrollbar 
+{
+  display: none;
+}
+
+.yearRow 
+{
+    position: relative;
+    left: -20vw;
+    width: 40vw;
+    display: flex;
+}
+
+.yearRow > * 
+{
+    margin: auto;
+    z-index: 0;
+    --clr: rgb(146, 146, 146);
+    color: var(--fontColor);
+    width: 30%;
+    font-size: 4rem;
+    border-bottom: dashed 1px var(--fontColor);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+@media only screen and (orientation: landscape) 
+{
+    #projectRoot .project:nth-child(even) {
+        right: calc(var(--projectWidth) + var(--projectGap));
+
+    }
+
+    #projectRoot .project:nth-child(odd)
+    {
+        left: calc( var(--rootWidth) + var(--projectGap));
+        
+    }
+
+}
+@media only screen and (orientation: portrait)
+{
+    #projectContainer
+    {
+
+        width:70vw;
+    }
+    #projectRoot .project
+    {
+        right: calc( var(--projectWidth)/2.0);
+        
+    }
+    .yearRow > *
+    {
+        width:60%;
+    }
+    .yearRow *:nth-child(2n)
+    {
+        display:none;
+    }
+    .projectTitle
+    {
+        font-size: 1.5rem;
+    }
+    .projectTitle:focus
+    {
+        cursor: pointer;
+        background-color: #303030d8;
+        height:var(--projectHeight);
+        bottom:var(--projectHeight);
+    }
+}
+
+#contactHead
+{
+    position:fixed;
+    margin-left: 63vw;
+    width:fit-content;
+    font-size: calc(9vh + 1.5vw);
+    color:#151515;
+}
+#contactMore
+{
+    text-align: justify;
+    margin-top: calc(13vh + 3vw);
+    position:fixed;
+    width: calc(48vh + 8vw);
+    margin-left: 54vw;
+    font-size: calc(3vh + 0.5vw);
+    color:#151515;
+}
+.padInside
+{
+    margin-top: 5.0vmin;
+    border-top: 1vmin dashed rgb(203, 207, 203);
+}
+
+#card1
+{
+    z-index: 1;
+    transform: rotate(5deg);
+    position:fixed;
+    top:60vh;
+    left:-50vw;
+    height:100vw;
+    width:400vw;
+    --s: 93px;
+    --c1: rgb(170, 160, 22);
+    --c2: rgb(168, 158, 20);
+    background: linear-gradient(atan(-.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
+    transition: all 0.3s ease-in-out;
+}
+#card1:hover
+{
+    top:35vh;
+    left:-47vw;
+}   
+#card2
+{
+    z-index: 2;
+    transform: rotate(-15deg);
+    position:fixed;
+    top:-50vh;
+    left:0vw;
+    height:200vh;
+    width:1000vh;
+    box-shadow: 0px -10px 30px 10px rgba(0, 0, 0, 0.279);
+    --s: 93px;
+    --c1: rgb(138, 10, 10);
+    --c2: rgb(136, 8, 8);
+    background: linear-gradient(atan(-.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
+}
+
+#page3
+{
+    transform: rotate(-0.3deg);
+    position:fixed;
+    top:99vh;
+    left:-2.5vw;
+    width:105vw;
+    height:100vh;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    --s: 93px;
+    --c1: rgb(39, 37, 35);
+    --c2:rgb(37, 35, 33);
+    background: linear-gradient(atan(.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
+}
+
+
+@media (orientation: portrait) {
+    .mainBoxes
+    {
+        width: 80vw;
+        height: 70vh;
+    }
+}
+
+
+a
+{
+    text-decoration: none;
+    color:inherit;
+}
+
+#theme
+{
+    margin:auto;
+    margin-top:1rem;
+    width:fit-content;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.2s ease-in-out all;
+    border-radius: 10vw;
+}
+#theme:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0px 2px 10px 1px var(--auxGreen);
+}
+
+@keyframes animateBG1
+{
+    0%
+    {
+        background-position: left;
+    }
+    100%
+    {
+        background-position:right;
+    }
+}
+@keyframes scrollUp
+{
+    0% 
+    {
+        position:fixed;
+        top: 99vh;
+    }
+    100% 
+    {
+        position:fixed;
+        top: 1vh;
+    }
+}
+@keyframes scrollDown
+{
+    0% 
+    {
+        position:fixed;
+        top: 1vh;
+    }
+    100% 
+    {
+        position:fixed;
+        top: 99vh;
+    }
+} 
+
+
+@keyframes projectIn
+{
+    0%
+    {
+        scale:0.7;
+    }
+    50%
+    {
+        scale:1;
+    }
+    100%
+    {
+        scale: 0.7;
+    }
+}
+
+
+@keyframes imgChangeIn
+{
+    0% 
+    {
+        opacity: 100%;
+    }
+    100%
+    {
+        opacity: 0%;
+    }
+}
+@keyframes imgChangeOut
+{
+    0% 
+    {
+        opacity: 0%;
+    }
+    100%
+    {
+        opacity: 100%;
+    }
+}

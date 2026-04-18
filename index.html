@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css">
+         <link rel="stylesheet" href="css/fontello.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="page1">
+            <div id="welcome">
+                    <div class="welcomeHead">CZEŚĆ!</div>
+                    <div id='welcomeText'>Zapraszam do przejrzenia mojego portfolio!</div>
+                    <div id="theme" onclick="changeTheme()"><i class='icon-moon'></i></div>
+                    
+                    <div id='arrowBG' onclick="slideSidePage()"><div id="arrow">O mnie</div></div>
+            </div>
+            <div id="bg1"></div>
+            <div id="sidePage">
+                    <div class="welcomeHead">O MNIE</div>
+                    <div id="textWrapper">
+                        <div class="columnText">
+                            Jestem obecnie studentem trzeciego roku Informatyki Stosowanej i Systemów Pomiarowych na Uniwersytecie Wrocławskim. Swoją przygodę z programowaniem rozpocząłem jeszcze w trakcie liceum, gdzie z kierunku biologiczno-chemicznego zacząłem kierować swoje zainteresowania w stronę informatyki. Swoją wiedzę czerpałem z relacji kolegów uczęszczających do techników informatycznych i po kilku latach wschłuchiwania się w ich rozmowy i samodzielnych prób programowania postanowiłem samemu wejść w ten głęboki temat podejmując podany wcześniej kierunek studiów. W trakcie nauki osiągałem wysokie wyniki, umożliwiające mi pobieranie stypendium rektora, które stanowiło główną pożywkę dla mojego samorozwoju.
+                        </div>
+                        <div class="columnText">
+                            Od samego początku najbardziej interesowały mnie aspekty GameDevu oraz programowania aplikacji internetowych. Po drodze doszły umiejętności obsługi domowego serwera bazowanego na systemie Linux (co umożliwiło mi m.in. stawianie własnych stron internetowych), zainteresowanie sieciami neuronowymi, które stanowić będą główny temat mojej pracy inżynierskiej oraz zaznajomienie z funkcjonowaniem mikrokontrolerów takich jak ESP32 i projektowania urządzeń, które by je wykorzystywały. W wolnym czasie rozwijam swoją wiedzę w dziedzinach, które pozwałałyby mi na tworzenie przydatnego lub interesującego mnie oprogramowania - gry, usługi rozszerzającego mojego HomeLaba i wiele innych.
+                        </div>
+                        <div id="zdjecie">
+                            <img src="https://media.newyorker.com/photos/59095bb86552fa0be682d9d0/master/pass/Monkey-Selfie.jpg">
+                        </div>
+                    </div>
+                    <div id='arrowBG' onclick="nextPage()"><div id="arrow">Moje projekty</div></div>
+            </div>
+        </div>
+        <div id="page2">
+            <div id="arrowBG" onclick="prevPage()"><div id="arrow"></div>&#8593;</div>
+            <div id="projectContainer">
+                <div id="projectRoot">
+                    <div class='yearRow'><div>2023</div><div>2023</div></div>
+<div class='project'><div class='images'><img id='images_0Top' onclick='changeIMG(0)' src='imgs/img-1.png'><img id='images_0Bottom' class='bottom' onclick='changeIMG(0)' src='imgs/img-0.png'></div><div class='projectTitle'><a href='https://kamijar20031.github.io/Color-Palette-Generator/' target='_blank'>Color Palette Generator</a><p>HTML CSS JavaScript</p>Aplikacja pozwalajaca dobrać palety kolorów w różnych zestawach<p></p></div></div>
+<div class='project'><div class='images'><img id='images_1Top' onclick='changeIMG(1)' src='imgs/img-3.png'><img id='images_1Bottom' class='bottom' onclick='changeIMG(1)' src='imgs/img-2.png'></div><div class='projectTitle'><a href='https://github.com/kamijar20031/Danmaku-game-base' target='_blank'>Danmaku game base</a><p>C++ CMake</p>Projekt z pierwszego roku ISSP - gra 2D bazująca na Touhou<p></p></div></div>
+<div class='yearRow'><div>2024</div><div>2024</div></div>
+<div class='project'><div class='images'><img id='images_2Top' onclick='changeIMG(2)' src='imgs/img-5.png'><img id='images_2Bottom' class='bottom' onclick='changeIMG(2)' src='imgs/img-4.png'></div><div class='projectTitle'><a href='https://github.com/kamijar20031/Python-Platformer' target='_blank'>Python Platformer</a><p>Python</p>Projekt zaliczeniowy na pierwszym roku studiów - platformówka z edytorem map<p></p></div></div>
+<div class='project'><div class='images'><img id='images_3Top' onclick='changeIMG(3)' src='none'><img id='images_3Bottom' class='bottom' onclick='changeIMG(3)' src='none'></div><div class='projectTitle'><a href='https://kamijar20031.github.io/' target='_blank'>KamiJar20031.github.io</a><p>CSS</p>Strona ukazująca moje portfolio, generowana przez HTML-Updater<p></p></div></div>
+<div class='project'><div class='images'><img id='images_4Top' onclick='changeIMG(4)' src='imgs/img-8.png'><img id='images_4Bottom' class='bottom' onclick='changeIMG(4)' src='imgs/img-7.png'></div><div class='projectTitle'><a href='https://github.com/kamijar20031/Backrooms-Crawler-Game' target='_blank'>Backrooms Crawler Game</a><p>C++ GLSL C</p>Gra z drugiego roku ISSP będąca projektem końcowym Projektu C+. Grafika została obsłużona bezpośrednio przez OpenGL<p></p></div></div>
+<div class='project'><div class='images'><img id='images_5Top' onclick='changeIMG(5)' src='imgs/img-10.png'><img id='images_5Bottom' class='bottom' onclick='changeIMG(5)' src='imgs/img-9.png'></div><div class='projectTitle'><a href='https://kamijar20031.github.io/BootlegSnake/' target='_blank'>BootlegSnake</a><p>HTML</p>Gra z pierwszego roku ISSP, będąca projektem zaliczeniowym na Projektowanie Aplikacji Internetowych<p></p></div></div>
+<div class='yearRow'><div>2025</div><div>2025</div></div>
+<div class='project'><div class='images'><img id='images_6Top' onclick='changeIMG(6)' src='imgs/img-12.png'><img id='images_6Bottom' class='bottom' onclick='changeIMG(6)' src='imgs/img-11.png'></div><div class='projectTitle'><a href='https://rogalrogalrogalrogal.online/' target='_blank'>rogalPages</a><p>PHP CSS</p>Prosty projekt zaliczeniowy wykonany w PHP mający funkcję forum.<p></p></div></div>
+<div class='project'><div class='images'><img id='images_7Top' onclick='changeIMG(7)' src='imgs/img-15.png'><img id='images_7Bottom' class='bottom' onclick='changeIMG(7)' src='imgs/img-14.png'></div><div class='projectTitle'><a href='https://tasks.rogalrogalrogalrogal.online/' target='_blank'>rogalTasks</a><p>Python JavaScript HTML</p>Aplikacja webowa działająca jako typowy task manager z harmonogramem i Discordowymi powiadomieniami<p></p></div></div>
+<div class='project'><div class='images'><img id='images_8Top' onclick='changeIMG(8)' src='imgs/img-16.png'><img id='images_8Bottom' class='bottom' onclick='changeIMG(8)' src='imgs/img-16.png'></div><div class='projectTitle'><a href='https://github.com/kamijar20031/HTML-Updater' target='_blank'>HTML Updater</a><p>Python HTML CSS</p>Projekt pozwalający na automatyczne aktualizowanie strony odpowiadajacej za moje portfolio<p></p></div></div>
+<div class='project'><div class='images'><img id='images_9Top' onclick='changeIMG(9)' src='imgs/img-18.png'><img id='images_9Bottom' class='bottom' onclick='changeIMG(9)' src='imgs/img-17.png'></div><div class='projectTitle'><a href='https://librarby.rogalrogalrogalrogal.online/' target='_blank'>rogalLibrarby</a><p>Python CSS JavaScript</p>Strona mająca usprawniać śledzenie przeczytanych książek. Jak na razie w mocnej budowie<p></p></div></div>
+<div class='project'><div class='images'><img id='images_10Top' onclick='changeIMG(10)' src='imgs/img-19.png'><img id='images_10Bottom' class='bottom' onclick='changeIMG(10)' src='imgs/img-19.png'></div><div class='projectTitle'><a href='https://kamijar20031.github.io/Niedziele-Handlowe/' target='_blank'>Niedziele Handlowe</a><p>HTML CSS JavaScript</p>Strona pokazująca czy zbliża się niedziela handlowa<p></p></div></div>
+<div class='yearRow'><div>2026</div><div>2026</div></div>
+<div class='project'><div class='images'><img id='images_11Top' onclick='changeIMG(11)' src='imgs/img-20.png'><img id='images_11Bottom' class='bottom' onclick='changeIMG(11)' src='imgs/img-20.png'></div><div class='projectTitle'><a href='https://github.com/kamijar20031/OpenGL-Linux' target='_blank'>OpenGL Linux</a><p>CMake C++ GLSL</p>Podstawowy silnik fizyczny razem z wizualizacją w OpenGL<p></p></div></div>
+<div class='project'><div class='images'><img id='images_12Top' onclick='changeIMG(12)' src='none'><img id='images_12Bottom' class='bottom' onclick='changeIMG(12)' src='none'></div><div class='projectTitle'><a href='https://github.com/kamijar20031/TasksApp-Port' target='_blank'>TasksApp Port</a><p>Kotlin</p><p></p></div></div>
+
+                </div>
+            </div>
+            <div id="arrowBG" onclick="nextPage()"><div id="arrow"></div>&#8595;</div>
+        </div>
+        <div id="page3">
+            <div id="arrowBG" onclick="prevPage()"><div id="arrow"></div>&#8593;</div>
+            <div id="contact">
+
+                <div id="card1">
+                    <div class="padInside">
+                        <div id="contactHead">Kontakt</div>
+                        <div id="contactMore">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</div>
+                    </div>
+
+                </div>
+                <div id="card2">
+                    <div class="padInside"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>
