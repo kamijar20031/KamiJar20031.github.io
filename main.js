@@ -1,7 +1,7 @@
 const images = [{srcs:['imgs/img-0.png', 'imgs/img-1.png'], idx:0},
 {srcs:['imgs/img-2.png', 'imgs/img-3.png'], idx:0},
 {srcs:['imgs/img-4.png', 'imgs/img-5.png', 'imgs/img-6.png'], idx:0},
-{srcs: [none.png], idx:0},
+{srcs: ['none.png'], idx:0},
 {srcs:['imgs/img-7.png', 'imgs/img-8.png'], idx:0},
 {srcs:['imgs/img-9.png', 'imgs/img-10.png'], idx:0},
 {srcs:['imgs/img-11.png', 'imgs/img-12.png', 'imgs/img-13.png'], idx:0},
@@ -10,7 +10,7 @@ const images = [{srcs:['imgs/img-0.png', 'imgs/img-1.png'], idx:0},
 {srcs:['imgs/img-17.png', 'imgs/img-18.png'], idx:0},
 {srcs:['imgs/img-19.png', 'imgs/img-19.png'], idx:0},
 {srcs:['imgs/img-20.png', 'imgs/img-20.png'], idx:0},
-{srcs: [none.png], idx:0},
+{srcs: ['none.png'], idx:0},
 ];
 const sidePage = document.getElementById("sidePage")
 const pages = [document.getElementById("page1"),document.getElementById("page2"), document.getElementById("page3")];
