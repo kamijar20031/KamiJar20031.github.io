@@ -44,6 +44,7 @@
 
 body
 {
+    position: fixed;
     margin:0;
     width:100%;
     height:100%;
@@ -120,39 +121,12 @@ body
     
 }
 
-#textWrapper
-{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    box-sizing: border-box;
-    width:70%;
-    margin:auto;
-}
-.columnText
-{
-    text-align: justify;
-    font-size: 1.6rem;
-}
-#zdjecie
-{
-    border-left: 1px solid white;
-    box-sizing: border-box;
-    margin:auto;
-}
-#zdjecie img
-{
-    margin:1rem;
-    margin-left: 2rem;
-    width:80%;
-    border-radius: 1rem;
-}
 #welcomeText
 {
     color: var(--fontColor);
     text-align: center;
     font-size: 1.8rem;
-    width: 40vw;
+    width: 60%;
     margin:auto;
 }
 #arrow
@@ -193,6 +167,33 @@ body
     cursor:pointer;
     box-shadow: 0px 2px 7px 3px var(--auxGreen);
     transform: scale(1);
+}
+
+#textWrapper
+{
+    padding: 1rem;
+    width:80%;
+    margin:auto;
+    max-height: 70vh;
+    overflow: scroll;
+}
+.columnText
+{
+    text-align: justify;
+    font-size: 1.4rem;
+}
+#zdjecie
+{
+    box-sizing: border-box;
+    margin:auto;
+    display: flex;
+    align-items: center;
+}
+#zdjecie img
+{
+    margin:auto;
+    width:80%;
+    border-radius: 1rem;
 }
 #page2
 {
@@ -351,6 +352,7 @@ body
     text-align: center;
 }
 
+
 @media only screen and (orientation: landscape) 
 {
     #projectRoot .project:nth-child(even) {
@@ -363,10 +365,47 @@ body
         left: calc( var(--rootWidth) + var(--projectGap));
         
     }
-
+    #textWrapper
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        box-sizing: border-box;
+        width:70%;
+        margin:auto;
+        
+    }
+    .columnText
+    {
+        text-align: justify;
+        font-size: 1.6rem;
+        
+    }
+    #zdjecie
+    {
+        border-left: 1px solid white;
+        box-sizing: border-box;
+        margin:auto;
+    }
+    #zdjecie img
+    {
+        margin:1rem;
+        margin-left: 2rem;
+        width:80%;
+        border-radius: 1rem;
+    }
 }
 @media only screen and (orientation: portrait)
 {
+    #textWrapper
+    {
+        height:50vh;
+        overflow: scroll;
+    }
+    .columnText
+    {
+        margin-bottom: 1.5rem;
+    }
     #projectContainer
     {
 
