@@ -352,7 +352,6 @@ body
     text-align: center;
 }
 
-
 @media only screen and (orientation: landscape) 
 {
     #projectRoot .project:nth-child(even) {
@@ -372,27 +371,20 @@ body
         gap: 2rem;
         box-sizing: border-box;
         width:70%;
-        margin:auto;
         
     }
     .columnText
     {
-        text-align: justify;
         font-size: 1.6rem;
-        
     }
     #zdjecie
     {
         border-left: 1px solid white;
-        box-sizing: border-box;
-        margin:auto;
     }
     #zdjecie img
     {
         margin:1rem;
         margin-left: 2rem;
-        width:80%;
-        border-radius: 1rem;
     }
 }
 @media only screen and (orientation: portrait)
