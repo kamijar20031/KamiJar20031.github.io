@@ -1,3 +1,6 @@
 
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
 .icon-sun:before { content: '\f185'; } /* '' */
 .icon-moon:before { content: '\f186'; } /* '' */
+.icon-linkedin-squared:before { content: '\f30c'; } /* '' */
