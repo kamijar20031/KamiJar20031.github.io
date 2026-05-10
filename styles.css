@@ -232,8 +232,6 @@ body
 }
 #projectContainer
 {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
     margin:3vh auto;
     width:50vw;
     height:60%;
